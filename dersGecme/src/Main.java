@@ -13,7 +13,7 @@ public class Main {
         for (int i=0;i<dersler.length;i++){
             while (true){
             System.out.println(dersler[i]+" notunuzu giriniz:");
-            int girilenNot = scanner.nextInt();
+            int girilenNot = scanner.nextInt();,,,
 
 
                     if (girilenNot>=0 && girilenNot<=100){
