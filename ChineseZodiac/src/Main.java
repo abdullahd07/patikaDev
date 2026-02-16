@@ -21,7 +21,7 @@ public class Main {
             int month = birthDate.getMonthValue();
             int year = birthDate.getYear();
 
-            int zodiacYear = year%12; 
+            int zodiacYear = year%12;
             String zodiac="";
             String horoscope ="";
 
