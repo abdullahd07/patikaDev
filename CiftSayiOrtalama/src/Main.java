@@ -11,7 +11,7 @@ public class Main {
         double sonuc;
 
 
-        for  (int i = 1; i <= a; i++) {
+        for  (int i = 0; i <= a; i++) {
             if (i%12 == 0) {
                 toplam += i;
                 uygunSayi++;
