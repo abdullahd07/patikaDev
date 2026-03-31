@@ -1,30 +1,31 @@
+import java.util.Scanner;
+
 public class Main {
 
-    static boolean isPalindrome(int number) {
 
-        if (number < 0) return false; // negatif sayılar palindrom kabul edilmez
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Sayı giriniz: ");
+        int num = scanner.nextInt();
+        if (isPalindrom(num)) {
+            System.out.println(num + " Palindrom Sayıdır.");
+        }
+        else {
+            System.out.println(num + " Palindrom Sayı Değildir.");
+        }
+    }
 
-        int original = number;
-        int reversed = 0;
+    static boolean isPalindrom(int number) {
+        int tempNumber = 0, orginalnumber = number;
 
         while (number != 0) {
+
             int digit = number % 10;
-            reversed = reversed * 10 + digit;
+            tempNumber = tempNumber * 10 + digit;
             number /= 10;
         }
 
-        return original == reversed;
-    }
+        return orginalnumber == tempNumber;
 
-    public static void main(String[] args) {
-        int number = 12321;
-
-        System.out.println("Girilen sayı: " + number);
-
-        if (isPalindrome(number)) {
-            System.out.println(number + " palindrom sayıdır.");
-        } else {
-            System.out.println(number + " palindrom sayı değildir.");
-        }
     }
 }
